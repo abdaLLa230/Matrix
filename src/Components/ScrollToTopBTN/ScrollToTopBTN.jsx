@@ -20,7 +20,9 @@ const ScrollToTopBTN = () => {
         });
     };
 
-    window.addEventListener('scroll', handleScroll);
+     window.addEventListener('scroll', handleScroll);
+
+    
 
     return visible ? (
         <button className="ScrollToTopBTN border border-second-light rounded-full p-2 text-second-light hover:text-light duration-300 shadow-sm animate-bounce" onClick={handleClick}><MdOutlineKeyboardDoubleArrowUp size={30} /></button>

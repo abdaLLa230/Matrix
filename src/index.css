@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;600;700;800&family=Creepster&family=Lobster&family=Luckiest+Guy&family=Pixelify+Sans&family=Press+Start+2P&family=Work+Sans:wght@200;300;400;500;600;700&family=Yuji+Hentaigana+Akari&family=Yuji+Mai&display=swap');
+
+:root {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --black: #04152d;
+  --black2: #041226;
+  --main: #00103d;
+  --black3: #020c1b;
+  --black-light: #173d77;
+  --black-lighter: #1c4b91;
+  --pink: #da2f68;
+  --orange: #f89e00;
+  --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}
+
+.font-pixelify {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+
+.font-shoulders {
+  font-family: 'Big Shoulders Stencil Display', sans-serif;
+}
+
+.font-Creepster {
+  font-family: 'Creepster', sans-serif;
+}
+
+.font-lobster {
+  font-family: 'Lobster', sans-serif;
+}
+
+.font-press {
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.font-luckiest {
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+.font-yuji {
+  font-family: 'Yuji Hentaigana Akari', sans-serif;
+}
+
+.font-yuji-mai {
+  font-family: 'Yuji Mai', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.txtH{
+    font-family: 'Orbitron', sans-serif;
+}
+body {
+  background-color: var(--main);
+  color: rgb(241, 241, 241);
+  font-family: 'Orbitron', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card-animate {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a2955;
+
+  .ggg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg,
+        rgba(#193763, 0) 0,
+        rgba(#193763, 0.2) 20%,
+        rgba(#193763, 0.5) 60%,
+        rgba(#193763, 0));
+    animation: shimmer 2s infinite;
+    content: "";
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

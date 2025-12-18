@@ -2,26 +2,36 @@ import React from "react";
 
 const About = () => {
   return (
-    <div style={{ backgroundColor: "black", color: "white", padding: "10px" }}>
-      <h1 style={{ fontSize: "20px", textAlign: "left", marginBottom: "5px", color: "red" }}>
+    <div className="min-h-screen text-white px-4 py-20">
+
+      <h1 className="text-3xl md:text-5xl font-bold text-center text-blue-400 mb-10">
         ABOUT OUR GAMES
       </h1>
 
-      <div style={{ display: "block" }}>
-        <div style={{ border: "1px solid white", marginBottom: "5px", padding: "5px" }}>
-          <h3>Discover Games</h3>
-          <p>Games from different genres and platforms.</p>
+      <div className="mt-16 grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
+
+        <div className="p-8 rounded-3xl border border-white/10 shadow-lg">
+          <h3 className="text-xl text-blue-300 mb-3">🎮 Discover Games</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Browse a wide collection of games from different genres and platforms.
+          </p>
         </div>
 
-        <div style={{ border: "1px solid white", marginBottom: "5px", padding: "5px" }}>
-          <h3>Game Details</h3>
-          <p>System requirements, ratings, release dates.</p>
+        <div className="p-8 rounded-3xl border border-white/10 shadow-lg">
+          <h3 className="text-xl text-blue-300 mb-3">📊 Game Details</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            View system requirements, ratings, release dates, and developer information
+            for each game.
+          </p>
         </div>
 
-        <div style={{ border: "1px solid white", padding: "5px" }}>
-          <h3>Smooth Experience</h3>
-          <p>Fast and simple interface.</p>
+        <div className="p-8 rounded-3xl border border-white/10 shadow-lg">
+          <h3 className="text-xl text-blue-300 mb-3">🚀 Smooth Experience</h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Enjoy a fast, responsive, and modern interface optimized for gamers.
+          </p>
         </div>
+
       </div>
     </div>
   );

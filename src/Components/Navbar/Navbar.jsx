@@ -5,6 +5,9 @@ import { useLocation, Link } from "react-router-dom";
 import "./style.scss";
 import logo from "./../../images/logo-footer.png"
 
+
+
+
 export default function Navbar() {
     const [show, setShow] = useState("top");
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -80,5 +83,3 @@ export default function Navbar() {
         </header>
     );
 };
-
-

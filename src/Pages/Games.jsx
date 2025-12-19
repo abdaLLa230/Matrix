@@ -9,7 +9,7 @@ import { fetchData } from '../store/slices/games-slice'
 
 
 const Games = () => {
-    const [more, setMore] = useState(20)
+    const [more, setMore] = useState(24)
     const data = useSelector((state) => state.games)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -34,7 +34,7 @@ const Games = () => {
                             ))}
                         </div>
                         <div className="next-btn mt-5 w-full flex justify-center">
-                            <button onClick={() => setMore(more + 12)} className='p-4 bg-second flex items-center gap-1 rounded'>Show More <MdExpandMore size={20} /></button>
+                            <button onClick={() => setMore(more + 15)} className='p-4 bg-second flex items-center gap-1 rounded'>Show More <MdExpandMore size={24} /></button>
                         </div>
                     </div> : <Loading />}
                 </div>

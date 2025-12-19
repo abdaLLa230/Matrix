@@ -1,30 +1,41 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import img from "../images/404 - Imgur.jpg";
+import errorImage from "../images/404 - Imgur.jpg";
 
-const NotFound = () => {
+const PageNotFound = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
-            <div className="max-w-3xl w-full text-center">
+        <section className="min-h-screen flex justify-center items-center p-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            
+            <div className="w-full max-w-3xl text-center">
 
-                <h1 className="text-4xl md:text-5xl font-bold text-red-400 mb-6">
-                    Oops! Page Not Found
-                </h1>
+                <header className="mb-6">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-red-400">
+                        404 — Page Not Found
+                    </h1>
+                </header>
 
                 <div className="relative mx-auto max-w-2xl">
-                    <img src={img} alt="404" className=" w-full rounded-[40px] shadow-[0_40px_80px_rgba(0,0,0,0.6)] opacity-95"/>
+                    <img
+                        src={errorImage}
+                        alt="Page not found illustration"
+                        className="w-full rounded-[40px] opacity-95 shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
+                    />
 
-                    <div className=" pointer-events-none absolute inset-0 rounded-[40px] bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40" />
+                    <span className="absolute inset-0 rounded-[40px] pointer-events-none bg-gradient-to-t from-slate-900/80 via-transparent to-slate-900/40" />
                 </div>
 
-
-                <Link to="/"  className=" inline-block mt-8 px-7 py-3 rounded-full text-white font-medium bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 shadow-md">
-                    Back to Home
+                <Link
+                    to="/"
+                    className="inline-block mt-8 px-8 py-3 rounded-full font-medium text-white
+                               bg-gradient-to-r from-indigo-600 to-blue-500
+                               hover:from-blue-500 hover:to-indigo-600
+                               transition-all duration-300 shadow-lg"
+                >
+                    Go Back Home
                 </Link>
 
             </div>
-        </div>
+        </section>
     );
 };
 
-export default NotFound;
+export default PageNotFound;

@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchData } from "../store/slices/games-slice"
 import Loading from "./Loading"
@@ -9,10 +9,29 @@ import Game from "../Components/Game/Game"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 const Home = () => {
     const dispatch = useDispatch()
+    const [cardsToShow, setCardsToShow] = useState(3);
     const data = useSelector((state) => state.games)
     useEffect(() => {
         dispatch(fetchData({}))
     }, [dispatch])
+
+    useEffect(() => {
+        function handleResize() {
+            const width = window.innerWidth;
+            if (width < 640) {
+                setCardsToShow(3);
+            } else if (width >= 640 && width < 1024) {
+                setCardsToShow(4);
+            } else {
+                setCardsToShow(3);
+            }
+        }
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <HelmetProvider>
@@ -33,7 +52,7 @@ const Home = () => {
                     <h3 className="flex gap-2 text-xl sm:text-3xl items-center"><LiaRobotSolid className="text-second-light" />Personalized Recommendations</h3>
                     {!data?.loading ? <div className="">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5 md:items-center md:justify-center mt-5">
-                            {data.data?.slice(3 , 6).map((game, i) => (
+                            {data.data?.slice(6, 6 + cardsToShow).map((game, i) => (
                                 <Game key={i} game={game} />
                             ))}
                         </div>

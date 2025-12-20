@@ -89,7 +89,7 @@ postcss.config.js
 ## Contribution
 
 - Abdallah Ali Abdallah           23017771       NT
-- Ibrahim Yaaer Abdelmoniem       23017792       NT
+- Ibrahim Yasser Abdelmoniem       23017792       NT
 - Mohamed Hany Abdelrahman        23017738       CS
 - Abdelrahman Saber Gaber         23017855       NT
 - Omar Sameh Sabry                23017897       CS

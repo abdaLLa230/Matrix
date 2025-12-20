@@ -7,8 +7,9 @@ import NotFound from "./Pages/NotFound";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Games from "./Pages/Games";
-function App() {
 
+
+function App() {
   const routes = createBrowserRouter([
     {
       path: "/", element: <Layout />, children: [

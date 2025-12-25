@@ -12,7 +12,7 @@ import Games from "./Pages/Games";
 function App() {
   const routes = createBrowserRouter([
     {
-      path: "/", element: <Layout />, children: [
+        path: "/", element: <Layout />, children: [
         { index: true, element: <Home /> },
         { path: "/game/:gameId", element: <GameDetails /> },
         { path: "/games", element: <Games /> },

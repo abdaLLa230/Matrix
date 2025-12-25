@@ -70,6 +70,9 @@ export default function Navbar() {
                     <li className="menuItem text-light">
                         <Link to="/contact" onClick={() => setMobileMenu(false)} className={`${pathname === "/contact" ? "border-b-2 border-second text-second" : "hover:text-second"} w-full py-2 px-0.5`}>Contact</Link>
                     </li>
+                    <li className="menuItem text-light">
+                        <Link to="/Nada" onClick={() => setMobileMenu(false)} className={`${pathname === "/contact" ? "border-b-2 border-second text-second" : "hover:text-second"} w-full py-2 px-0.5`}>Contact</Link>
+                    </li>
                 </ul>
             </div>
 

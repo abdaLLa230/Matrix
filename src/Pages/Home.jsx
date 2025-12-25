@@ -39,8 +39,12 @@ const Home = () => {
                 <title>Matrix</title>
             </Helmet>
             <section className="min-h-screen text-light ">
-                <div className="relative h-screen  bg-cover bg-no-repeat bg-fixed bg-center" style={{ backgroundImage: `url("${bg}")` }}>
-                    <div className="layer absolute right-0 left-0 top-0 bottom-0 bg-gradient-to-t from-main to-transparent"></div>
+                <div className="relative h-screen  bg-cover bg-no-repeat bg-fixed bg-center" >
+                    <video autoPlay muted loop loading="" className="bg-video hidden bg-cover xl:block min-h-screen">
+                        <source src="public\Vidtest.MOV" type="video/mp4" />
+                    </video>
+
+                    <div className="layer absolute right-0 left-0 top-0 bottom-0 "></div>
                     <div className="content absolute z-10 top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 flex flex-col items-center text-center gap-3 select-none">
                         <h5 className="text-7xl font-bold font-Creepster tracking-wider opacity-70 txtH pt-[4rem] md:pt-0">Welcome</h5>
                         <p className="font-luckiest opacity-70"><strong>TO</strong></p>

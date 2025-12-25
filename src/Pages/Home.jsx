@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchData } from "../store/slices/games-slice"
 import Loading from "./Loading"
+import bg from "../images/Vidtest.MOV"
 import { LiaRobotSolid } from "react-icons/lia"
 import { Link } from "react-router-dom"
 import Game from "../Components/Game/Game"
@@ -40,8 +41,9 @@ const Home = () => {
             <section className="min-h-screen text-light ">
                 <div className="relative h-screen  bg-cover bg-no-repeat bg-fixed bg-center" >
                     <video autoPlay muted loop loading="" className="bg-video hidden bg-cover xl:block min-h-screen">
-                        <source src="/Vidtest.mp4" type="video/mp4" />                 
+                        <source src={bg} type="video/mp4" />
                     </video>
+
                     <div className="layer absolute right-0 left-0 top-0 bottom-0 "></div>
                     <div className="content absolute z-10 top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 flex flex-col items-center text-center gap-3 select-none">
                         <h5 className="text-7xl font-bold font-Creepster tracking-wider opacity-70 txtH pt-[4rem] md:pt-0">Welcome</h5>

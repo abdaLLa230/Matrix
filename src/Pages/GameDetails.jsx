@@ -39,7 +39,7 @@ const GameDetails = () => {
             </Helmet>
             {bgs?.length ? <section className=' bg-cover bg-no-repeat h-screen bg-fixed ' style={{ backgroundImage: `url(${bgs[bgIndex].link})` }}>
                 <div className="pt-14 bg-main bg-opacity-70 h-full overflow-y-scroll font-serif ">
-                    <div className="container py-12 " >
+                    <div className="md:px-10 px-2 py-12 " >
                         <div className="grid grid-cols-5 gap-8">
                             <div className="col-span-5 md:col-span-2 flex flex-col gap-5 sticky">
                                 <div className="image">

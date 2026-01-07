@@ -8,8 +8,8 @@ const Footer = () => {
         <footer>
             <ScrollToTopBTN />
             <div className="bg-main-light mt-10 text-light text-center">
-                <div className="container py-5">
-                    <div className="flex flex-col items-center gap-5">
+                <div className=" py-5">
+                    <div className="flex flex-col items-center justify-center gap-5">
                         <div className="logo">
                             <img src={logo} alt="" />
                         </div>

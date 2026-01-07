@@ -16,9 +16,9 @@
   -webkit-text-size-adjust: 100%;
   --black: #04152d;
   --black2: #041226;
-  --main: #00103d;
+  --main: #011e1e;
   --black3: #020c1b;
-  --black-light: #173d77;
+  --black-light: #172f77;
   --black-lighter: #1c4b91;
   --pink: #da2f68;
   --orange: #f89e00;
@@ -120,6 +120,36 @@ body {
 }
 
 
+
+/* يمكنك إضافة هذا في ملف CSS منفصل إذا كنت تستخدم CSS عادي */
+.card-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثيرات إضافية إذا أردت */
+.glow-on-hover {
+    position: relative;
+}
+
+.glow-on-hover::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.glow-on-hover:hover::after {
+    opacity: 1;
+}
 .bg-video {
   position: fixed;
   right: 0;
@@ -131,12 +161,12 @@ body {
 }
 
 
-.container {
-  width: 100%;
+.containe {
+  width: 96% !important;
   margin: auto;
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
   .container {
     max-width: 100%;
   }
@@ -176,7 +206,7 @@ body {
   .container {
     max-width: 1536px;
   }
-}
+} */
 
 
 .ScrollToTopBTN{

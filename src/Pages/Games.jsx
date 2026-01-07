@@ -25,10 +25,10 @@ const Games = () => {
                 <title>Explore Games</title>
             </Helmet>
             <section className='pt-14'>
-                <div className="container py-5 ">
+                <div className="lg:px-10 py-5 ">
                     
                     {!data?.loading ? <div className="">
-                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 items-center justify-center mt-5">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 items-center px-3 lg:px-0  mt-5">
                             {data?.data?.slice(0, more).map((game, i) => (
                                 <Game key={i} game={game} />
                             ))}

@@ -52,7 +52,7 @@ const Home = () => {
                         <Link to={"/games"} className="p-5 rounded my-3  tracking-wider shadow shadow-black bg-main hover:bg-main-light">Discover Games</Link>
                     </div>
                 </div>
-                <div className="container py-5 md:px-4">
+                <div className=" py-5 md:px-10">
                     <h3 className="flex gap-2 text-xl sm:text-3xl items-center"><LiaRobotSolid className="text-second-light" />Personalized Recommendations</h3>
                     {!data?.loading ? <div className="">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5 md:items-center md:justify-center mt-5">

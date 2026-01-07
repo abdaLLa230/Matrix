@@ -1,28 +1,63 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { IoBrowsers } from "react-icons/io5"
-import { BsWindows } from "react-icons/bs"
-const Game = ({ game }) => {
-    return (
-        <Link to={`/game/${game.id}`} className="rounded overflow-hidden bg-main-light hover:bg-main-lighter hover:animate-pulse hover:mix-blend-plus-lighter duration-300 group">
-            <div className="image-box">
-                <img src={game.thumbnail} className="w-full" alt={game.title + " Image"} />
-            </div>
-            <div className="body p-5 flex flex-col gap-5">
-                <div className="flex items-center justify-between">
-                    <h5 className="text-base font-semibold">{game.title.length > 10 ? game.title.slice(0, 10) + "..." : game.title}</h5>
-                    <button className="bg-main-lighter p-3 rounded-md duration-300 group-hover:bg-main-light">Free</button>
-                </div>
-                <div className="flex justify-between text-light-gray">
-                    <p className="">{game.publisher.length > 10 ? game.publisher.slice(0, 10) + "..." : game.title}</p>
-                    <div className="flex gap-3 items-center text-sm">
-                        <p className='bg-main-lighter duration-300 group-hover:bg-main-light p-1 rounded'>{game.genre}</p>
-                        <p>{game.platform === "Web Browser" ? <IoBrowsers /> : <BsWindows />}</p>
-                    </div>
-                </div>
-            </div>
-        </Link>
-    )
-}
+ import React from 'react'
+ import { Link } from 'react-router-dom'
+ import { IoBrowsers } from "react-icons/io5"
+ import { BsWindows } from "react-icons/bs"
 
-export default Game
+ const Game = ({ game }) => {
+     return (
+         <Link 
+             to={`/game/${game.id}`}
+             className="group bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10"
+         >
+             {/* Image Section */}
+             <div className="relative h-48 overflow-hidden">
+                 <img 
+                     src={game.thumbnail} 
+                     alt={game.title}
+                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                 />
+                
+                 {/* Gradient Overlay */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
+                
+                 {/* Free Badge */}
+                 <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold text-xs px-3 py-1 rounded-full">
+                     FREE
+                 </div>
+                
+                 {/* Platform Icon */}
+                 <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm rounded-full p-2">
+                     {game.platform === "Web Browser" ? 
+                         <IoBrowsers className="text-cyan-300 text-lg" /> : 
+                         <BsWindows className="text-blue-300 text-lg" />
+                     }
+                 </div>
+             </div>
+
+             {/* Content Section */}
+             <div className="p-5">
+                 {/* Title */}
+                 <h3 className="text-white font-bold text-lg mb-2 group-hover:text-cyan-300 transition-colors">
+                     {game.title.length > 18 ? `${game.title.slice(0, 18)}...` : game.title}
+                 </h3>
+                
+                 {/* Publisher */}
+                 <p className="text-gray-400 text-sm mb-4">
+                     {game.publisher.length > 20 ? `${game.publisher.slice(0, 20)}...` : game.publisher}
+                 </p>
+                
+                 {/* Footer */}
+                 <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                     <span className="bg-gray-800 text-cyan-300 text-xs font-medium px-3 py-1.5 rounded-full">
+                         {game.genre}
+                     </span>
+                     <span className="text-xs text-gray-500 group-hover:text-white transition-colors">
+                         Play Now →
+                     </span>
+                 </div>
+             </div>
+         </Link>
+     )
+ }
+
+ export default Game
